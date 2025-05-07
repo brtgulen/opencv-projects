@@ -6,6 +6,8 @@ kernel = np.ones((5,5),np.uint8)
 
 path = "Resources/lena.png"
 img = cv2.imread(path)
+img = cv2.resize(img,(400,600))
+
 imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 imgA = cv2.cvtColor(img,cv2.COLOR_BGR2YCrCb)
 imgBlur = cv2.GaussianBlur(img,(99,99),0)
